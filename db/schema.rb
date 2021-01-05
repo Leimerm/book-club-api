@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_14_165316) do
+ActiveRecord::Schema.define(version: 2021_01_05_184006) do
 
   create_table "books", force: :cascade do |t|
     t.string "title"
@@ -25,6 +25,15 @@ ActiveRecord::Schema.define(version: 2020_12_14_165316) do
     t.string "alt_cover2"
     t.string "alt_cover3"
     t.string "summary"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string "user_name"
+    t.string "email"
+    t.string "password"
+    t.string "password_confirmation"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
