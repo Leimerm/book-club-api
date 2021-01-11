@@ -7,10 +7,10 @@
 
 Rails.application.config.middleware.insert_before 0, Rack::Cors do
   allow do
-    origins '*'
+    origins 'https://book-club-front.herokuapp.com/'
 
     resource '*',
-      headers: :any,
+      headers: :origin, content-type,
       methods: [:get, :post, :put, :patch, :delete, :options, :head]
   end
 end
